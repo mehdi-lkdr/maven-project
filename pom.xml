@@ -74,11 +74,6 @@
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>findbugs-maven-plugin</artifactId>
 			  <version>3.0.6-SNAPSHOT</version>
-			  <configuration>
-				<xmlOutput>true</xmlOutput>
-				<!-- Optional directory to put findbugs xdoc xml report -->
-				<xmlOutputDirectory>target/site</xmlOutputDirectory>
-			  </configuration>
             </plugin>
 
             <plugin>
@@ -89,6 +84,21 @@
         </configuration>
       </plugin>
     </plugins>
+	
+	<reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>3.0.6-SNAPSHOT</version>
+        <configuration>
+          <xmlOutput>true</xmlOutput>
+          <!-- Optional directory to put findbugs xdoc xml report -->
+          <xmlOutputDirectory>target/site</xmlOutputDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
 
     <pluginManagement>
       <plugins>
